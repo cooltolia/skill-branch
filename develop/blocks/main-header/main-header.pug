@@ -9,6 +9,14 @@ mixin main-header()
                     +e.block-title Skill points:
                     +e.block-value 1350
                     +e.block-icon
+                        +icon('logo')
                 +e.block.--push-right
-                +e.block
-                +e.block
+                    +header-profile
+                +e.block.--one
+                    +e.A.notifications.hasNotifications(href='#')
+                        +icon('notifications')
+                +e.block.--two
+                    +e.A.exit(href='#')
+                        +e.SPAN.exit-text Выйти
+                        +e.SPAN.exit-icon
+                            +icon('exit')

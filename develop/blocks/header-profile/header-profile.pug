@@ -1,0 +1,15 @@
+mixin header-profile()
+    +b.header-profile
+        +e.col
+            +e.row
+                +e.SPAN.reference Привет, 
+                +e.SPAN.name  Константин
+            +e.row
+                +e.A.appeal(href='#')
+                    +e.SPAN.appeal-text Заполните профиль +100
+                    +e.SPAN.appeal-icon
+                        +icon('logo')
+
+        +e.col
+            +e.avatar
+                img(src="images/avatar.jpg", alt="")

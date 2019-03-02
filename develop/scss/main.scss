@@ -6,31 +6,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
 @import "../blocks/**/*";
 
-body {
-    background-color: #f1f1f1;
-}
 
-.lazyload {
-    position: relative;
-    transition: opacity 300ms ease;
-    opacity: 0;
-}
-
-.lazyload.loaded {
-    opacity: 1;
-}
-
-.con {
-    @include make-container();
-    width: 1200px;
-}   
-
-.ro {
-    @include make-row()
-}
-
-.a,
-.b {
-    @include make-col-ready();
-    @include make-col(6)
+svg,
+svg path {
+    fill: inherit;
 }

@@ -7,79 +7,77 @@ $tablet: "(min-width: 768px)";
 $desktop: "(min-width: 1440px)";
 
 $base-font-size: 16px;
-$gotham: 'Gotham Pro', Helvetica, Arial, sans-serif;
+$roboto: 'Roboto Mono', Helvetica, Arial, sans-serif;
 
-$themecolor: #f15d2b;
-$darktext: #131313;
-$darkgreytext: #5d5d5d;
-$lighttext: #ffffff;
+$indigo: #473770;
+$darkestIndigo: #150A33;
+$darkIndigo: #1C0E42;
+$black: #040407;
+$red: #FF3531;
+$grey: #9CA9BA;
+$darkGrey: #675F7F;
+$lightGrey: #ECECEC;
+$green: #4DBA87;
+$lightGreen: #CFFBE6;
+$white: #FFFFFF;
 
-@mixin btn-theme($themecolor: $themecolor) {
+@mixin btn-theme($modifier: dark) {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 12px;
     
-    font-size: 20px;
-    color: $lighttext;
-    font-family: $gotham;
-    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $white;
 
-    border-radius: 40px;
-    background-color: $themecolor;
+    border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
     border: none;
 
-    // box-shadow: 0px 4px 12px rgba(230, 95, 37, 0.5);
+    @if ($modifier == dark) {
+        background-color: $indigo;
 
-    transition: all 300ms ease;
+        &:hover {
+            background-color: #341F6A;
+        }
 
+        &:active {
+            background-image: linear-gradient(180deg, #33118F 50%, rgba(119, 72, 246, 1) 100%);
+        }
+    } @else if ($modifier == bright) {
+        background-image: linear-gradient(55.59deg, #FF0800 -15.98%, #FF5E5E 105.02%);
+        box-shadow: 0px 4px 24px rgba(144, 50, 238, 0.2),
+        0px 4px 14px rgba(255, 0, 0, 0.2);
 
-    &:hover,
-    &:active,
-    &:focus {
-        text-decoration: none;
-        color: $lighttext;
-        background-color: darken($themecolor, 10%);
+        &:hover {
+            background-image: linear-gradient(35.93deg, #FF5954 -15.98%, #FF5E5E 105.02%);
+            box-shadow: 0px 6px 14px rgba(144, 50, 238, 0.2),
+            0px 8px 14px rgba(255, 0, 0, 0.2);
+        }
+
+        &:active {
+            background-image: linear-gradient(35.93deg, #FF0800 -15.98%, #DA1313 105.02%);
+            box-shadow: none;
+        }
     }
 
-    &:active {
-        background-color: darken($themecolor, 20%);
-    }
-}
 
-@mixin btn-light {
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-    align-items: center;
-    color: $lighttext;
-    font-family: $gotham;
-    font-weight: 400;
-    border-radius: 50px;
-
-    border: 1px solid transparent;
-    background-color: #f2f2f2;
-    cursor: pointer;
-    text-decoration: none;
-
-    box-shadow: 3px 5px 27px 2px rgba(white, 0.29);
     transition: all 300ms ease;
 
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
-        color: $darktext;
-        background-color: darken(#f2f2f2, 10%);
+        color: $white;
     }
 
-    &:active {
-        background-color: darken(#f2f2f2, 20%);
-    }
 }
+
 
 @mixin visually-hidden {
     position: absolute;
@@ -94,18 +92,10 @@ $lighttext: #ffffff;
     overflow: hidden;
 }
 
-@mixin heading {
-    max-width: 650px;
-    margin: 0 auto;
-    color: #191919;
-    font-size: 27px;
-    font-weight: 400;
-    line-height: 1.2;
-    text-align: center;
-    text-transform: uppercase;
-    @media (max-width: 480px) {
-        font-size: 10px;
-    }
+@mixin card {
+    background: #FFFFFF;
+    box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+    border-radius: 4px;
 }
 
 @mixin svg-icon {
@@ -124,15 +114,3 @@ $lighttext: #ffffff;
     max-height: 100%;
 }
 
-@mixin section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    font-family: $gotham;
-    color: $darktext;
-    
-    @media #{$desktop} {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-}

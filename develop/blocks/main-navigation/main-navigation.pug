@@ -1,2 +1,24 @@
 mixin main-navigation()
     +b.NAV.main-navigation
+        +e.UL.list
+            +e.LI.item
+                +e.A.link.active(href='#')
+                    +e.SPAN.link-icon.--logo
+                        +icon('logo', 'main-navigation', 'logo')
+                        +icon('logo-title', 'main-navigation', 'logo-title')
+                +e.A.link(href='#')
+                    +e.SPAN.link-icon
+                        +icon('cources', 'main-navigation')
+                    +e.SPAN.link-title Все курсы
+                +e.A.link(href='#')
+                    +e.SPAN.link-icon
+                        +icon('achievements', 'main-navigation')
+                    +e.SPAN.link-title Мои достижения
+                +e.A.link(href='#')
+                    +e.SPAN.link-icon
+                        +icon('homework', 'main-navigation')
+                    +e.SPAN.link-title Домашние задания
+                +e.A.link(href='#')
+                    +e.SPAN.link-icon.hasMessages
+                        +icon('bell', 'main-navigation')
+                    +e.SPAN.link-title Уведомления

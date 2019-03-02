@@ -2,25 +2,13 @@
     position: relative;
     margin: 0;
 
-    font-family: $gotham;
-    color: #000;
-    font-size: 22px;
+    font-family: $roboto;
+    color: $darkIndigo;
+    font-size: 24px;
     font-weight: 700;
     text-align: center;
 
     &--light {
         color: #fff;
-    }
-}
-
-// @media #{$tablet} {
-//     .title {
-//         font-size: 24px;
-//     }
-// }
-
-@media #{$desktop} {
-    .title {
-        font-size: 42px;
     }
 }

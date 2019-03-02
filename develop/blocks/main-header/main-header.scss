@@ -1,10 +1,128 @@
 .main-header {
     padding: 14px 0;
     min-height: 72px;
-    
+
     background-color: #fff;
 }
 
 .main-header__row {
-    @include make-row;
+    display: flex;
+}
+
+.main-header__block {
+    margin-right: 40px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    &--push-right {
+        margin-left: auto;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.main-header__block-title {
+    margin-right: 10px;
+
+    color: $grey;
+}
+
+.main-header__block-value {
+    color: $darkIndigo;
+}
+
+.main-header__block-icon {
+    position: relative;
+    margin-left: 5px;
+    width: 14px;
+    height: 16px;
+
+    svg {
+        @include svg-icon;
+
+        fill: $red;
+    }
+}
+
+.main-header__notifications {
+    position: relative;
+    width: 16px;
+    height: 16px;
+
+    &.hasNotifications {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            background-color: $red;
+            border-radius: 50%;
+        }
+    }
+
+    svg {
+        @include svg-icon;
+        stroke: $grey;
+        fill: none;
+
+        transition: stroke 300ms ease;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        svg {
+            stroke: $darkestIndigo;
+        }
+    }
+}
+
+.main-header__exit {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.7;
+    color: $grey;
+
+    text-decoration: none;
+
+    transition: color 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: $darkIndigo;
+
+        svg {
+            stroke: $darkestIndigo;
+        }
+    }
+}
+
+.main-header__exit-icon {
+    position: relative;
+    width: 14px;
+    height: 16px;
+    margin-left: 14px;
+
+    svg {
+        @include svg-icon;
+        fill: none;
+        stroke: $grey;
+
+        transition: stroke 300ms ease;
+    }
 }

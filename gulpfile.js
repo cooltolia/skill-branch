@@ -49,8 +49,10 @@ gulp.task("default", ["browser-sync", "libs", "watch"], function(){
 gulp.task("svgSprite", function() {
     let symbolConfig = {
         mode: {
+            inline: true,
             symbol: {
                 dest: '.',
+                preview: false,
                 sprite: 'html-sprite.svg',
             }
         }

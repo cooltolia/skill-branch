@@ -2,5 +2,102 @@
     position: absolute;
     width: 90px;
     height: 100%;
-    background-color: #1C0E42;
+    background-color: #1c0e42;
+}
+
+.main-navigation__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-navigation__link {
+    display: block;
+    padding: 20px 5px;
+
+    transition: background-color 300ms ease;
+    text-decoration: none;
+
+    &.active,
+    &:hover,
+    &:active {
+        background-color: #160a34;
+        text-decoration: none;
+
+        .main-navigation__use {
+            fill: $red;
+
+            .glogo {
+                fill: blue
+            }
+
+            &.logo-title {
+                fill: $white;
+            }
+        }
+
+        .main-navigation__link-title {
+            color: $white;
+        }
+    }
+}
+
+.main-navigation__link-icon {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+
+    &.hasMessages {
+        width: 23px;
+        margin: 0 auto;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            top: 2px;
+            right: 2px;
+            z-index: 1;
+
+            background-color: $red;
+            border-radius: 50%;
+        }
+    }
+}
+
+.main-navigation__svg {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+    height: 30px;
+    max-width: 100%;
+
+    &.logo {
+        height: 32px;
+    }
+
+    &.logo-title {
+        height: 7px;
+    }
+
+}
+
+.main-navigation__use {
+    fill: #675f7f;
+
+    transition: fill 300ms ease;
+
+    
+}
+
+.main-navigation__link-title {
+    display: block;
+    color: #675f7f;
+    font-size: 11px;
+    line-height: 1;
+    text-align: center;
+
+    transition: color 300ms ease;
 }
