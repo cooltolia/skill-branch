@@ -1,0 +1,12 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+doctype
+html(lang='ru')
+    +doc-header
+    body.pageload.no-js
+        +board
+            +main-navigation
+            +main-header
+            +main-content
+    +doc-footer
