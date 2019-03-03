@@ -1,0 +1,25 @@
+mixin course-branches()
+    +b.SECTION.course-branches
+        +e.H2.title Ветви курса
+        +e.slider-wrapper
+            +e.slider
+                +e.slide
+                    +course-branch
+                +e.slide
+                    +course-branch
+                +e.slide
+                    +course-branch
+            +e.arrows
+                +e.BUTTON.arrow.disabled
+                    +icon('chevron-left')
+                +e.BUTTON.arrow.--right
+                    +icon('chevron-left')
+            +e.UL.dots
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link.active
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link

@@ -1,0 +1,127 @@
+.course-branches {
+    @include card;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.course-branches__title {
+    margin: 0;
+    margin-bottom: 15px;
+
+    color: $darkIndigo;
+    font-size: 16px;
+}
+
+.course-branches__slider-wrapper {
+    position: relative;
+}
+
+.course-branches__slider {
+    margin-bottom: 20px;
+
+    /* temporary styles I guess */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.course-branches__slide {
+    width: 244px;
+    flex: 0 0 auto;
+}
+
+.course-branches__dots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-branches__dots-item {
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.course-branches__dots-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 4px;
+    border-radius: 50%;
+
+    transition: background-color 300ms ease;
+    background-color: $grey;
+    background-clip: content-box;
+
+    &.active,
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $darkIndigo;
+    }
+}
+
+.course-branches__arrows {
+    position: absolute;
+    top: -40px;
+    right: 0;
+
+    border: 1px solid $lightGrey;
+    border-radius: 3px;
+    display: flex;
+}
+
+.course-branches__arrow {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    width: 20px;
+    height: 20px;
+
+    border-right: 1px solid $lightGrey;
+    
+
+    &:last-child {
+        border: none;
+    }
+
+    svg {
+        position: absolute; 
+        width: 4px;
+        height: 7px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        stroke: $darkIndigo;
+        fill: none;
+
+        transition: stroke 300ms ease;
+    }
+
+    &.disabled svg,
+    &:hover svg,
+    &:active svg,
+    &:focus svg {
+        stroke: $grey;
+    }
+
+    &--right {
+        svg {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+    }
+}

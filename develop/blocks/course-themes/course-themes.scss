@@ -1,10 +1,23 @@
 .course-themes {
+    position: relative;
     margin-left: 40px;
     @include card;
     padding: 20px;
     margin-bottom: 20px;
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
 
 .course-themes__card {
     margin-bottom: 20px;
+}
+
+.course-themes__signup {
+    @include btn-theme(bright);
+    width: 235px;
+    float: right;
 }

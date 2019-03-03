@@ -1,7 +1,7 @@
-mixin course-slider()
+mixin course-slider(title)
     +b.SECTION.course-slider
         +e.title
-            +title Спикеры курса
+            +title= title
         +e.slider
             +e.slide
                 +e.slide-inner

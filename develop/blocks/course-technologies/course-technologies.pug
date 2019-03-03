@@ -1,0 +1,9 @@
+mixin course-technologies()
+    +b.SECTION.course-technologies
+        +e.H2.title Стек технологий
+        +e.UL.list
+            -var i = 0;
+            while i < 9
+                +e.LI.item
+                    img(src="images/course-technologies/image" + i + ".jpg", alt="")
+                    -i++

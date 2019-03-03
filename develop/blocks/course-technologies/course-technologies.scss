@@ -1,0 +1,31 @@
+.course-technologies {
+    @include card;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+.course-technologies__title {
+    margin: 0;
+    margin-bottom: 20px;
+
+    color: $darkIndigo;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.course-technologies__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.course-technologies__item {
+    margin-right: 35px;
+    margin-bottom: 15px;
+}

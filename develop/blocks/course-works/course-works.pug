@@ -1,0 +1,27 @@
+mixin course-works()
+    +b.SECTION.course-works
+        +e.H2.title Ветви курса
+        +e.slider-wrapper
+            +e.slider
+                +e.slide
+                    +course-work
+                +e.slide
+                    +course-work
+                +e.slide
+                    +course-work
+                +e.slide
+                    +course-work
+            +e.arrows
+                +e.BUTTON.arrow.disabled
+                    +icon('chevron-left')
+                +e.BUTTON.arrow.--right
+                    +icon('chevron-left')
+            +e.UL.dots
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link.active
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link
+                +e.LI.dots-item
+                    +e.BUTTON.dots-link
