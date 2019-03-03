@@ -1,0 +1,28 @@
+mixin course-slider()
+    +b.SECTION.course-slider
+        +e.title
+            +title Спикеры курса
+        +e.slider
+            +e.slide
+                +e.slide-inner
+                    +e.person
+                        +e.person-header
+                            +e.person-avatar
+                                img(src="images/course-slider/avatar.jpg", alt="Константин Константинов")
+                            +e.person-socials
+                                +person-socials
+                        +e.person-label #Спикер
+                        +e.person-name Константин Константинов
+                        +e.person-post Chief technology officer
+                    +e.text
+                        +e.P.paragraph
+                            | Платформа Android является одной из самых востребованных на данный момент: огромное количество поддерживаемых устройств и более 1 миллиарда пользователей по всему миру. Community разработчиков под Android не стоит на месте, платформа постоянно развивается: появляются новые фичи, новые архитектурные подходы и мейнстримы в разработке. Данный курс рассчитан на разработчиков, которые "в теме", чей "Hello world" остался где-то за плечами, на тех, кто хочет развиваться как профессионал и быть на волне. 
+        +e.numbers
+            +e.number-current 01
+            +e.number-total 12
+        +e.arrows
+            +e.BUTTON.arrow.--left
+                +icon('arrow-left')
+            +e.BUTTON.arrow.--right
+                +icon('arrow-left')
+        

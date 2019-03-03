@@ -1,0 +1,10 @@
+.course-themes {
+    margin-left: 40px;
+    @include card;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-themes__card {
+    margin-bottom: 20px;
+}

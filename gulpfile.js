@@ -57,38 +57,6 @@ gulp.task("svgSprite", function() {
             }
         }
     };
-    let cssConfig = { // currently unused
-        mode: {
-            css: {
-                dest: './app/css',
-                layout: 'diagonal',
-                sprite: '../images/css-sprite.svg',
-                render: {
-                    scss: {
-                        dest: "../../develop/scss/sprite.scss",
-                    }
-                }
-            }
-        }
-        /* shape: {},
-        mode: {
-            css: {
-                dest: "./",
-                layout: "diagonal",
-                sprite: 'app/images/css-sprite.svg',
-                bust: false,
-                render: {
-                    scss: {
-                        dest: "./develop/scss/sprite.scss",
-                        template: "./app/images/svg/template.scss"
-                    }
-                }
-            }
-        },
-        variables: {
-            mapname: "icons"
-        } */
-    }
     gulp.src('./app/images/svg/inline-svg/*.svg')
         .pipe(svgmin({
             js2svg: {
@@ -106,15 +74,32 @@ gulp.task("svgSprite", function() {
         }))
         .pipe(svgSprite(symbolConfig))
         .pipe(gulp.dest('./app/images'));
-    /* gulp.src('./app/images/svg/css-svg/*.svg')
+})
+
+gulp.task("svgSpriteSaveStyles", function() {
+    let symbolConfig = {
+        mode: {
+            inline: true,
+            symbol: {
+                dest: '.',
+                preview: false,
+                sprite: 'html-sprite-fill.svg',
+            }
+        }
+    };
+    gulp.src('./app/images/svg/inline-svg-fill/*.svg')
         .pipe(svgmin({
             js2svg: {
                 pretty: true
-            }
+            },
         }))
-        .pipe(svgSprite(cssConfig))
-        .pipe(gulp.dest('.')); */
-    
+        .pipe(cheerio({
+            run: function ($) {
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(svgSprite(symbolConfig))
+        .pipe(gulp.dest('./app/images'));
 })
 
 // var CONFIG = require('./config.json');

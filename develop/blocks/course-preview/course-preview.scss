@@ -1,3 +1,138 @@
 .course-preview {
-    
+    @include card;
+    margin-bottom: 22px;
+}
+
+.course-preview__video {
+    position: relative;
+    width: 100%;
+    height: 256px;
+    box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+
+    background-image: url('../images/course-preview/poster.jpg');
+    background-size: cover;
+}
+
+.course-preview__actions {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-preview__subscribe {
+    @include btn-theme(bright);
+    min-width: 245px;
+}
+
+.course-preview__play {
+    position: relative;
+    width: 47px;
+    height: 47px;
+
+    background: none;
+    border: none;
+
+    transition: transform 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        transform: scale(1.1);
+    }
+
+    svg {
+        @include svg-icon;
+        fill: white;
+    }
+}
+
+.course-preview__data {
+    border-top: 2px solid $lightGrey;    
+}
+
+.course-preview__row {
+    display: flex;
+}
+
+.course-preview__col {
+    flex: 1 1 auto;
+    padding: 20px;
+
+    &--short {
+        width: 236px;
+        flex-grow: 0;
+        border-left: 1px solid $lightGrey;
+    }
+}
+
+.course-preview__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    color: $darkIndigo;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.course-preview__description {
+    margin: 0;
+    padding-right: 55px;
+
+    font-family: $roboto;
+    color: $grey;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.course-preview__type {
+    display: inline-block;
+    padding: 0 7px;
+    margin-bottom: 10px;
+
+    color: $green;
+    font-size: 14px;
+    line-height: 1.7;
+
+    background-color: $lightGreen;
+    border-radius: 2px;
+}
+
+.course-preview__details {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    color: $grey;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.course-preview__details-item {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.course-preview__details-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+
+    svg {
+        @include svg-icon;
+        fill: none;
+        stroke: $grey;
+    }
+}
+
+.course-preview__details-value {
+    font-weight: 700;
+    margin-right: 5px;
 }

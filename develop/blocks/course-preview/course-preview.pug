@@ -1,2 +1,31 @@
 mixin course-preview()
     +b.SECTION.course-preview
+        +e.video
+            +e.actions
+                +e.A.subscribe(href='#' title='Записаться на курс') Записаться на курс
+                +e.BUTTON.play(title='Воспроизвести видео')
+                    +icon('play')
+        +e.data
+            +e.row
+                +e.col
+                    +e.H2.title Название курса
+                    +e.P.description
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate
+                +e.col.--short
+                    +e.type 100% онлайн
+                    +e.UL.details
+                        +e.LI.details-item
+                            +e.SPAN.details-icon
+                                +icon('rating')
+                            +e.SPAN.details-value 4.8
+                            +e.SPAN.details-title рейтинг курса
+                        +e.LI.details-item
+                            +e.SPAN.details-icon
+                                +icon('members')
+                            +e.SPAN.details-value 24
+                            +e.SPAN.details-title зарегистрированно
+                        +e.LI.details-item
+                            +e.SPAN.details-icon
+                                +icon('views')
+                            +e.SPAN.details-value 900
+                            +e.SPAN.details-title просмотрели

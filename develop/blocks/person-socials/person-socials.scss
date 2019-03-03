@@ -1,0 +1,36 @@
+.person-socials {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.person-socials__item {
+    margin-right: 6px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.person-socials__link {
+    display: block;
+    position: relative;
+    width: 26px;
+    height: 26px;
+
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: -5.69767px 19.3721px 42.1628px rgba(144, 50, 238, 0.3),
+        2.27907px 9.11628px 13.6744px rgba(255, 0, 0, 0.1);
+
+    color: $darkIndigo;
+    font-size: 11px;
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

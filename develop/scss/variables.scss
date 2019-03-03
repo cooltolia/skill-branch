@@ -7,7 +7,8 @@ $tablet: "(min-width: 768px)";
 $desktop: "(min-width: 1440px)";
 
 $base-font-size: 16px;
-$roboto: 'Roboto Mono', Helvetica, Arial, sans-serif;
+$robotoMono: 'Roboto Mono', Helvetica, Arial, sans-serif;
+$roboto: 'Roboto', Helvetica, Arial, sans-serif;
 
 $indigo: #473770;
 $darkestIndigo: #150A33;
@@ -30,6 +31,7 @@ $white: #FFFFFF;
     
     font-size: 12px;
     text-align: center;
+    font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: $white;

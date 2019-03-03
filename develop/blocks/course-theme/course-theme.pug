@@ -1,0 +1,19 @@
+mixin course-theme(number, type, label)
+    +b.ARTICLE.course-theme(class=type)
+        +e.H3.title #{number} Тема урока
+        +e.label(class=type)= label
+        +e.P.description
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+        +e.FOOTER.footer
+            +e.duration
+                +e.duration-label Теория <b>3 ч.</b>
+                +e.duration-label Практика <b>1.5 ч.</b>
+            +e.skills
+                +e.skills-item
+                    +e.skills-icon
+                        +icon('js', 'fill')
+                    +e.skills-points +4
+                +e.skills-item
+                    +e.skills-icon
+                        +icon('webpack', 'fill')
+                    +e.skills-points +4
