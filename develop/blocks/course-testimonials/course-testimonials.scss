@@ -1,0 +1,15 @@
+.course-testimonials {
+    @include card;
+    position: relative;
+    padding: 40px;
+    padding-bottom: 120px;
+    margin-left: 40px;
+    margin-bottom: 22px;
+
+    background-image: url('../images/course-slider/bg.svg');
+    background-size: contain;
+}
+
+.course-testimonials__title {
+    margin-bottom: 25px;
+}

@@ -1,7 +1,5 @@
-mixin course-slider(title)
-    +b.SECTION.course-slider
-        +e.title
-            +title= title
+mixin course-slider(hasLabel)
+    +b.course-slider
         +e.slider
             +e.slide
                 +e.slide-inner
@@ -11,7 +9,8 @@ mixin course-slider(title)
                                 img(src="images/course-slider/avatar.jpg", alt="Константин Константинов")
                             +e.person-socials
                                 +person-socials
-                        +e.person-label #Спикер
+                        if (hasLabel)
+                            +e.person-label #Спикер
                         +e.person-name Константин Константинов
                         +e.person-post Chief technology officer
                     +e.text

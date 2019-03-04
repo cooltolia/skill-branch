@@ -1,0 +1,15 @@
+.course-speakers {
+    @include card;
+    position: relative;
+    padding: 40px;
+    min-height: 420px;
+    margin-bottom: 22px;
+
+    background-image: url('../images/course-slider/bg.svg');
+    background-size: contain;
+}
+
+.course-speakers__title {
+    margin-bottom: 25px;
+
+}

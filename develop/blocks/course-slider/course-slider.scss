@@ -1,20 +1,5 @@
 .course-slider {
-    @include card;
     position: relative;
-    padding: 40px;
-    min-height: 420px;
-    margin-bottom: 22px;
-    
-    background-image: url('../images/course-slider/bg.svg');
-    background-size: contain;
-}
-
-.course-slider__title {
-    margin-bottom: 25px;
-
-    .title {
-        text-align: left
-    }
 }
 
 .course-slider__slider {
@@ -105,8 +90,8 @@
 .course-slider__numbers {
     position: absolute;
     display: flex;
-    bottom: -15px;
-    left: 130px;
+    bottom: -135px;
+    left: 100px;
     height: 190px;
 
     &::before {
@@ -150,7 +135,7 @@
 .course-slider__arrows {
     position: absolute;
     width: 80px;
-    bottom: 50px;
+    bottom: -60px;
 
     display: flex;
     justify-content: space-between;

@@ -1,16 +1,16 @@
 mixin course-works()
     +b.SECTION.course-works
-        +e.H2.title Ветви курса
+        +e.H2.title Лучшие работы
         +e.slider-wrapper
             +e.slider
                 +e.slide
-                    +course-work
+                    +course-work(1, 1, 'medal-gold')
                 +e.slide
-                    +course-work
+                    +course-work(2, 2, 'medal-gold')
                 +e.slide
-                    +course-work
+                    +course-work(3, 2, 'medal-gold')
                 +e.slide
-                    +course-work
+                    +course-work(7, 1, 'medal-simple')
             +e.arrows
                 +e.BUTTON.arrow.disabled
                     +icon('chevron-left')
