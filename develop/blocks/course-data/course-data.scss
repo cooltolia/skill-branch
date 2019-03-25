@@ -1,0 +1,219 @@
+.course-data {
+    @include card;
+    padding: 20px;
+    margin-left: 40px;
+
+    background: $main-color;
+    border-radius: 4px;
+}
+
+.course-data__inner {
+    border: 1px solid #493e68;
+    border-radius: 4px;
+
+    display: flex;
+}
+
+.course-data__col {
+    flex: 1 1 auto;
+
+    &--short {
+        width: 280px;
+        flex: 0 0 auto;
+        border-left: 1px solid #493e68;
+    }
+}
+
+.course-data__row {
+    padding: 12px 20px;
+    border-bottom: 1px solid #493e68;
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.course-data__date-label {
+    display: inline-block;
+    vertical-align: baseline;
+
+    font-size: 14px;
+    color: $white;
+    font-weight: 700;
+}
+
+.course-data__date-value {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 10px;
+
+    color: $accent-color;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: -11.33px 15.8621px 49.8522px rgba(144, 50, 238, 0.5), 11.33px 15.8621px 38.5222px rgba(255, 0, 0, 0.3);
+}
+
+.course-data__features {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.course-data__features-item {
+    flex: 1 1 auto;
+    margin-right: 10px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.course-data__features-title {
+    margin-bottom: 3px;
+
+    color: $gray-color;
+}
+
+.course-data__features-value {
+    margin: 0;
+    color: $white;
+}
+
+.course-data__features-icons {
+    display: flex;
+    align-items: center;
+}
+
+.course-data__features-icon {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 12px;
+
+    svg {
+        @include svg-icon;
+    }
+}
+
+.course-data__technologies {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: -8px;
+}
+
+.course-data__technology {
+    width: 205px;
+    margin-right: 55px;
+    flex: 0 0 auto;
+    margin-bottom: 8px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+.course-data__technology-icon {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 12px;
+
+    svg {
+        @include svg-icon;
+    }
+}
+
+.course-data__technology-name {
+    margin-right: 15px;
+
+    font-size: 14px;
+    color: $gray-color;
+}
+
+.course-data__technology-progress {
+    position: relative;
+    width: 85px;
+    height: 6px;
+    margin-left: auto;
+    margin-right: 5px;
+    background: #493e68;
+    border-radius: 4px;
+
+    .inner-progress {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        border-radius: 4px;
+
+        background-color: $accent-color;
+    }
+}
+
+.course-data__technology-points {
+    margin-left: auto;
+
+    color: $white;
+    font-size: 14px;
+    text-align: right;
+}
+
+.course-data__appeal {
+    padding: 10px 25px;
+}
+
+.course-data__appeal-title {
+    margin-bottom: 0;
+
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.course-data__appeal-timer {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.course-data__price {
+    margin-bottom: 10px;
+}
+
+.course-data__price-title {
+    margin-bottom: -5px;
+
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.course-data__price-old {
+    margin-bottom: -10px;
+
+    color: $white;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: line-through;
+    text-shadow: -11.33px 15.8621px 49.8522px rgba(144, 50, 238, 0.5), 11.33px 15.8621px 38.5222px rgba(255, 0, 0, 0.3);
+}
+
+.course-data__price-new {
+    color: $accent-color;
+    font-size: 18px;
+    font-weight: 700;
+
+    text-shadow: -11.33px 15.8621px 49.8522px rgba(144, 50, 238, 0.5), 11.33px 15.8621px 38.5222px rgba(255, 0, 0, 0.3);
+}
+
+.course-data__appeal-button {
+    @include btn-theme(bright);
+    width: 100%;
+}

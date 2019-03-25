@@ -1,0 +1,26 @@
+mixin course-referal()
+    +b.SECTION.course-referal
+        +e.header
+            +e.H3.title Реферальная программа
+            +e.BUTTON(type='button').about
+                +icon('question-sign', 'fill')
+        +e.body
+            +e.code
+                +e.SPAN.code-value skillbranch.ru/go/FLz0r4
+                +e.BUTTON(type='button').code-copy
+                    +icon('copy', 'fill')
+            +e.UL.socials
+                +e.LI.socials-item
+                    +e.A.socials-link
+                        +icon('vk-square', 'fill')
+                +e.LI.socials-item
+                    +e.A.socials-link
+                        +icon('facebook-square', 'fill')
+                +e.LI.socials-item
+                    +e.A.socials-link
+                        +icon('twitter-square', 'fill')
+                +e.LI.socials-item
+                    +e.A.socials-link
+                        +icon('mail-square', 'fill')
+            +e.P.appeal
+                | Поделись ссылкой <br> обучайся со скидкой

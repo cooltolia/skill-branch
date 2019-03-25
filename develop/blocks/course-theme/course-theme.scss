@@ -1,15 +1,15 @@
 .course-theme {
     padding: 20px;
 
-    border: 1px solid $darkIndigo;
+    border: 1px solid $main-color;
     border-radius: 4px;
 
     &.available {
-        border-color: $red;
+        border-color: $accent-color;
     }
 
     &.closed {
-        border-color: $grey;
+        border-color: $gray-color;
     }
 }
 
@@ -29,17 +29,17 @@
     line-height: 1.7;
     color: $white;
 
-    background-color: $darkIndigo;
+    background-color: $main-color;
     border-radius: 2px;
 
     &.available {
-        background-color: $lightGreen;
-        color: $green;
+        background-color: $green-color-color-l;
+        color: $green-color;
     }
 
     &.closed {
-        background-color: $lightGrey;
-        color: $grey;
+        background-color: $gray-color-l;
+        color: $gray-color;
     }
 }
 
@@ -47,8 +47,8 @@
     margin: 0;
     margin-bottom: 15px;
 
-    font-family: $roboto;
-    color: $grey;
+    font-family: $font-2;
+    color: $gray-color;
     font-size: 14px;
     line-height: 1.3;
 }
@@ -68,9 +68,9 @@
     margin-right: 12px;
 
     font-size: 14px;
-    color: $grey;
+    color: $gray-color;
 
-    border: 1px solid $lightGrey;
+    border: 1px solid $gray-color-l;
     border-radius: 3px;
 
     &:last-child {
@@ -85,7 +85,7 @@
 
 .course-theme__skills {
     display: flex;
-    border: 1px solid $lightGrey;
+    border: 1px solid $gray-color-l;
     border-radius: 3px;
 }
 
@@ -94,9 +94,9 @@
     display: flex;
 
     font-size: 14px;
-    color: $grey;
+    color: $gray-color;
 
-    border-right: 1px solid $lightGrey;
+    border-right: 1px solid $gray-color-l;
 
     &:last-child {
         border: none;

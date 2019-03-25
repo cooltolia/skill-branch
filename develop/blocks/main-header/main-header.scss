@@ -1,7 +1,7 @@
 .main-header {
     padding: 14px 0;
     min-height: 72px;
-    font-family: $roboto;
+    font-family: $font-2;
 
     background-color: #fff;
 }
@@ -32,11 +32,11 @@
 .main-header__block-title {
     margin-right: 10px;
 
-    color: $grey;
+    color: $gray-color;
 }
 
 .main-header__block-value {
-    color: $darkIndigo;
+    color: $main-color;
 }
 
 .main-header__block-icon {
@@ -48,7 +48,7 @@
     svg {
         @include svg-icon;
 
-        fill: $red;
+        fill: $accent-color;
     }
 }
 
@@ -67,14 +67,14 @@
             right: 0;
             z-index: 1;
 
-            background-color: $red;
+            background-color: $accent-color;
             border-radius: 50%;
         }
     }
 
     svg {
         @include svg-icon;
-        stroke: $grey;
+        stroke: $gray-color;
         fill: none;
 
         transition: stroke 300ms ease;
@@ -84,7 +84,7 @@
     &:active,
     &:focus {
         svg {
-            stroke: $darkestIndigo;
+            stroke: $main-color-d;
         }
     }
 }
@@ -95,7 +95,7 @@
 
     font-size: 14px;
     line-height: 1.7;
-    color: $grey;
+    color: $gray-color;
 
     text-decoration: none;
 
@@ -105,10 +105,10 @@
     &:active,
     &:focus {
         text-decoration: none;
-        color: $darkIndigo;
+        color: $main-color;
 
         svg {
-            stroke: $darkestIndigo;
+            stroke: $main-color-d;
         }
     }
 }
@@ -122,7 +122,7 @@
     svg {
         @include svg-icon;
         fill: none;
-        stroke: $grey;
+        stroke: $gray-color;
 
         transition: stroke 300ms ease;
     }

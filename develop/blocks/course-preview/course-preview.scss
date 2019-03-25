@@ -52,7 +52,7 @@
 }
 
 .course-preview__data {
-    border-top: 2px solid $lightGrey;    
+    border-top: 2px solid $gray-color-l;    
 }
 
 .course-preview__row {
@@ -66,7 +66,7 @@
     &--short {
         width: 236px;
         flex-grow: 0;
-        border-left: 1px solid $lightGrey;
+        border-left: 1px solid $gray-color-l;
     }
 }
 
@@ -74,7 +74,7 @@
     margin: 0;
     margin-bottom: 10px;
 
-    color: $darkIndigo;
+    color: $main-color;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -83,8 +83,8 @@
     margin: 0;
     padding-right: 55px;
 
-    font-family: $roboto;
-    color: $grey;
+    font-family: $font-2;
+    color: $gray-color;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -94,11 +94,11 @@
     padding: 0 7px;
     margin-bottom: 10px;
 
-    color: $green;
+    color: $green-color;
     font-size: 14px;
     line-height: 1.7;
 
-    background-color: $lightGreen;
+    background-color: $green-color-color-l;
     border-radius: 2px;
 }
 
@@ -107,7 +107,7 @@
     margin: 0;
     list-style: none;
 
-    color: $grey;
+    color: $gray-color;
     font-size: 14px;
     line-height: 1.7;
     font-weight: 400;
@@ -128,7 +128,7 @@
     svg {
         @include svg-icon;
         fill: none;
-        stroke: $grey;
+        stroke: $gray-color;
     }
 }
 

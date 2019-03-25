@@ -3,7 +3,7 @@
     width: 90px;
     height: 100%;
 
-    font-family: $robotoMono;
+    font-family: $font;
 
     background-color: #1c0e42;
 }
@@ -28,7 +28,7 @@
         text-decoration: none;
 
         .main-navigation__use {
-            fill: $red;
+            fill: $accent-color;
 
             .glogo {
                 fill: blue
@@ -64,7 +64,7 @@
             right: 2px;
             z-index: 1;
 
-            background-color: $red;
+            background-color: $accent-color;
             border-radius: 50%;
         }
     }

@@ -1,0 +1,110 @@
+mixin modal-settings()
+    +b.modal-settings
+        aside.aside
+            .user
+                .avatar
+                    img(src="../images/modal-settings/noname-avatar.svg", alt="")
+                    .empty-avatar
+                        .points 
+                            span +100
+                            .icon
+                                +icon('logo', null)
+                        p.appeal Добавить фото
+                .name Константин
+                .email konstantin@gmail.com
+                .status middle developer
+                p.description
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate 
+            .skills
+                .title Skill points:
+                .number 1350/2000
+                .progress
+                    .inner-progress(style='width: 70%')
+                table.data
+                    tr.line
+                        td.key Content base:
+                        td.value +500
+                    tr.line
+                        td.key Respect:
+                        td.value +100
+                    tr.line
+                        td.key Skills:
+                        td.value +100
+                    tr.line
+                        td.key Coins:
+                        td.value +300
+        main.main
+            h2.title Личные данные
+            form(action='#' method='post')
+                .line
+                    .block
+                        .input
+                            input(type="text" id="settings-name" name='settings-name' value='Констнатин')
+                            label(for="settings-name") Имя
+                        .points.active
+                            .number +10
+                            .icon 
+                                +icon('logo', null)
+                .line
+                    .block
+                        .input
+                            input(type="email" id="settings-email" name='settings-email' value='konstantin@gmail.com')
+                            label(for="settings-email") E-mail
+                        .points.active
+                            .number +30
+                            .icon 
+                                +icon('logo', null)
+                    .block
+                        .input
+                            input(type="text" id="settings-tel" name='settings-tel')
+                            label(for="settings-tel") Телефон
+                        .points
+                            .number +20
+                            .icon 
+                                +icon('logo', null)
+                .line
+                    .block
+                        .input
+                            input(type="text" id="settings-vk" name='settings-vk')
+                            label(for="settings-vk") Вконтакте
+                        .points
+                            .number +10
+                            .icon 
+                                +icon('logo', null)
+                    .block
+                        .input
+                            input(type="text" id="settings-facebook" name='settings-facebook')
+                            label(for="settings-facebook") Facebook
+                        .points
+                            .number +10
+                            .icon 
+                                +icon('logo', null)
+                .line
+                    .block
+                        .input
+                            input(type="text" id="settings-github" name='settings-github')
+                            label(for="settings-github") Github
+                        .points
+                            .number +10
+                            .icon 
+                                +icon('logo', null)
+                    .block
+                        .input
+                            input(type="text" id="settings-telegram" name='settings-telegram')
+                            label(for="settings-telegram") Telegram
+                        .points
+                            .number +10
+                            .icon 
+                                +icon('logo', null)
+                .line
+                    .block
+                        .input
+                            textarea(id="settings-about" name='settings-about' value='Констнатин')
+                            label(for="settings-about") Описание
+                        .points
+                            .number +10
+                            .icon 
+                                +icon('logo', null)
+                .line
+                    .block
+                        button.submit Сохранить

@@ -1,0 +1,40 @@
+.timer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+.timer__cell {
+    position: relative;
+    margin-right: 8px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.timer__value,
+.timer__divider {
+    color: $accent-color;
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    text-shadow: -11.33px 15.8621px 49.8522px rgba(144, 50, 238, 0.5), 11.33px 15.8621px 38.5222px rgba(255, 0, 0, 0.3);
+}
+
+.timer__label {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: $white;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+}

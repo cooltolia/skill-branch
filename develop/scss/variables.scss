@@ -6,20 +6,30 @@ $lg: "(min-width: 1200px)";
 $tablet: "(min-width: 768px)";
 $desktop: "(min-width: 1440px)";
 
-$base-font-size: 16px;
-$robotoMono: 'Roboto Mono', Helvetica, Arial, sans-serif;
-$roboto: 'Roboto', Helvetica, Arial, sans-serif;
+$img-path: '~assets/img';
 
-$indigo: #473770;
-$darkestIndigo: #150A33;
-$darkIndigo: #1C0E42;
+$grid-gutter-width:30px;
+$vertical-space:60px;
+
+$base-font-size: 16px;
+$font: 'Roboto Mono', Helvetica, Arial, sans-serif;
+$font-2: 'Roboto', Helvetica, Arial, sans-serif;
+
+$main-color: #1C0E42;
+$main-color-l: #473770;
+$main-color-d: #150A33;
+
+$accent-color: #FF3531;
+
+$gray-color: #9CA9BA;
+$gray-color-l: #ECECEC;
+$gray-color-m: #F7F7F7;
+$gray-blue-color: #675F7F;
+
+$green-color: #4DBA87;
+$green-color-color-l: #CFFBE6;
+
 $black: #040407;
-$red: #FF3531;
-$grey: #9CA9BA;
-$darkGrey: #675F7F;
-$lightGrey: #ECECEC;
-$green: #4DBA87;
-$lightGreen: #CFFBE6;
 $white: #FFFFFF;
 
 @mixin btn-theme($modifier: dark) {
@@ -42,9 +52,10 @@ $white: #FFFFFF;
     border: none;
 
     @if ($modifier == dark) {
-        background-color: $indigo;
+        background-color: $main-color-l;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: #341F6A;
         }
 
@@ -56,7 +67,8 @@ $white: #FFFFFF;
         box-shadow: 0px 4px 24px rgba(144, 50, 238, 0.2),
         0px 4px 14px rgba(255, 0, 0, 0.2);
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-image: linear-gradient(35.93deg, #FF5954 -15.98%, #FF5E5E 105.02%);
             box-shadow: 0px 6px 14px rgba(144, 50, 238, 0.2),
             0px 8px 14px rgba(255, 0, 0, 0.2);

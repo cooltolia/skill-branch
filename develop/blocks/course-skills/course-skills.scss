@@ -1,0 +1,61 @@
+.course-skills {
+    @include card;
+    margin-bottom: 20px;
+}
+
+.course-skills__header {
+    padding: 15px 18px;
+
+    border-bottom: 1px solid $gray-color-l;
+}
+
+.course-skills__title {
+    margin: 0;
+
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.course-skills__list {
+    padding: 15px 18px;
+    margin: 0;
+    list-style: none;
+
+    border-bottom: 1px solid $gray-color-l;
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.course-skills__item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.course-skills__item-icon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+
+    svg {
+        @include svg-icon;
+    }
+}
+
+.course-skills__item-title {
+    font-family: $font-2;
+    color: $gray-color;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+

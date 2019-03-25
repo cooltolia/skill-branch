@@ -1,12 +1,12 @@
 mixin course-work(place, image, icon)
     +b.course-work
         +e.preview
-            img(src="images/course-works/work" + image + ".jpg", alt="")
-        +e.label
-            +e.label-icon
-                +icon(icon, 'fill')
-            +e.label-place= place
+            img(src="images/course-works/work" + image + ".png", alt="")
+            +e.label
+                +e.label-icon
+                    +icon(icon, 'fill')
+                +e.label-place= place
         +e.author
             +e.author-avatar
-                img(src="images/courses-works/avatar.jpg", alt="")
+                img(src="images/course-works/avatar.jpg", alt="")
             +e.author-name Константин Константинов

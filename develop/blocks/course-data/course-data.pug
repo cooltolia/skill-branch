@@ -1,0 +1,71 @@
+mixin course-data()
+    +b.SECTION.course-data
+        +e.inner
+            +e.col
+                +e.row
+                    +e.date
+                        +e.SPAN.date-label До начала курса
+                        +e.SPAN.date-value 29.02.2019
+                +e.row
+                    +e.DL.features
+                        +e.features-item
+                            +e.DT.features-title Мест:
+                            +e.DD.features-value 100
+                        +e.features-item
+                            +e.DT.features-title Длительность:
+                            +e.DD.features-value 40 часов
+                        +e.features-item
+                            +e.DT.features-title Сложность:
+                            +e.DD.features-value Junior
+                        +e.features-item
+                            +e.DT.features-title Технологии:
+                            +e.DD.features-value
+                                +e.features-icons
+                                    +e.features-icon
+                                        +icon('js', 'fill')
+                                    +e.features-icon
+                                        +icon('vue', 'fill')
+                                    +e.features-icon
+                                        +icon('react', 'fill')
+                                    +e.features-icon
+                                        +icon('webpack', 'fill')
+                +e.row
+                    +e.technologies
+                        +e.technology
+                            +e.technology-icon
+                                +icon('js', 'fill')
+                            +e.technology-name Node js
+                            +e.technology-progress
+                                .inner-progress(style='width: 20%')
+                            +e.technology-points +10
+                        +e.technology
+                            +e.technology-icon
+                                +icon('webpack', 'fill')
+                            +e.technology-name Webpack
+                            +e.technology-progress
+                                .inner-progress(style='width: 50%')
+                            +e.technology-points +1
+                        +e.technology
+                            +e.technology-icon
+                                +icon('vue', 'fill')
+                            +e.technology-name Vue js
+                            +e.technology-progress
+                                .inner-progress(style='width: 80%')
+                            +e.technology-points +2
+                        +e.technology
+                            +e.technology-icon
+                                +icon('react', 'fill')
+                            +e.technology-name React
+                            +e.technology-progress
+                                .inner-progress(style='width: 15%')
+                            +e.technology-points +3                        
+            +e.col.--short
+                +e.appeal
+                    +e.appeal-title До окончания скидки 20% 
+                    +e.appeal-timer
+                        +timer
+                    +e.price
+                        +e.price-title Стоимость
+                        +e.price-old 60000 руб.
+                        +e.price-new 35000 руб.
+                    +e.A.appeal-button(href='#') Пройти курс
