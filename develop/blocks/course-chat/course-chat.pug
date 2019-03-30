@@ -1,0 +1,111 @@
+mixin course-chat()
+    +b.SECTION.course-chat
+        header.header
+            h2.title Чат курса
+            .online 
+                | В сети: 
+                span 23
+        main.body
+            .item
+                .message
+                    .message-header
+                        .avatar
+                            img(src="images/avatar2.jpg", alt="")
+                        .data
+                            .nick kostyan
+                            .online
+                            .date 10.08
+                            .time 00:12
+                        .message-votes
+                            button(type='button').arrow.minus
+                                +icon('small-arrow')
+                            .value.positive 21
+                            button(type='button').arrow.plus
+                                +icon('small-arrow')
+                    .message-text
+                        | Платформа Android является одной из самых востребованных на данный момент: огромное количество поддерживаемых устройств и более 1 миллиарда пользователей по всему миру.
+                    .message-footer
+                        button(type='button').message-reply Ответить 
+                .replies
+                    .message
+                        .message-header
+                            .avatar
+                                img(src="images/avatar1.jpg", alt="")
+                            .data
+                                .nick mikha
+                                .date 10.08
+                                .time 00:13
+                            .message-votes
+                                button(type='button').arrow.minus
+                                    +icon('small-arrow')
+                                .value.negative -3
+                                button(type='button').arrow.plus
+                                    +icon('small-arrow')
+                        .message-text
+                            | Платформа Android является одной из самых востребованных на данный момент
+                        .message-footer
+                            button(type='button').message-reply Ответить 
+            .item
+                .message
+                    .message-header
+                        .avatar
+                            img(src="images/avatar2.jpg", alt="")
+                        .data
+                            .nick kostyan
+                            .online
+                            .date 10.08
+                            .time 00:14
+                        .message-votes
+                            button(type='button').arrow.minus
+                                +icon('small-arrow')
+                            .value.positive 21
+                            button(type='button').arrow.plus
+                                +icon('small-arrow')
+                    .message-text
+                        | Платформа Android является одной из самых востребованных на данный момент: огромное количество поддерживаемых устройств и более 1 миллиарда пользователей по всему миру.
+                    .message-footer
+                        button(type='button').message-reply Ответить 
+                .replies
+                    .message
+                        .message-header
+                            .avatar
+                                img(src="images/avatar1.jpg", alt="")
+                            .data
+                                .nick mikha
+                                .date 10.08
+                                .time 00:15
+                            .message-votes
+                                button(type='button').arrow.minus
+                                    +icon('small-arrow')
+                                .value.negative -3
+                                button(type='button').arrow.plus
+                                    +icon('small-arrow')
+                        .message-text
+                            | Платформа Android является одной из самых востребованных на данный момент
+                        .message-footer
+                            button(type='button').message-reply Ответить 
+                    .replies
+                        .message
+                            .message-header
+                                .avatar
+                                    img(src="images/avatar2.jpg", alt="")
+                                .data
+                                    .nick kostyan
+                                    .online
+                                    .date 10.08
+                                    .time 00:17
+                                .message-votes
+                                    button(type='button').arrow.minus
+                                        +icon('small-arrow')
+                                    .value.positive 999
+                                    button(type='button').arrow.plus
+                                        +icon('small-arrow')
+                            .message-text
+                                | Хватит спамить
+                            .message-footer
+                                button(type='button').message-reply Ответить 
+        form.send-message(action="#" method="post")
+            textarea(placeholder='Напишите сообщение...')
+            button.submit
+                .icon
+                    +icon('send')

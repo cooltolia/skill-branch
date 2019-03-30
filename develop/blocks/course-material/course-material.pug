@@ -1,0 +1,32 @@
+mixin course-material()
+    +b.SECTION.course-material
+        .video-wrapper
+            .video-container
+                video(src="")
+                button.play-video
+        .content
+            h2.title Название курса
+            .label.available Доступный
+            p.description
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate 
+            h2.title Видео транскрипт
+            .samples
+                .sample
+                    .play-sample
+                        .icon
+                    .text Начало фразы
+                    .duration 00:12
+                .sample
+                    .play-sample
+                        .icon
+                    .text Начало фразы
+                    .duration 00:12
+                .sample
+                    .play-sample
+                        .icon
+                    .text Начало фразы
+                    .duration 00:12
+            button.load-more(type='button') 
+                span Показать все
+                    .icon
+                        +icon('down-arrow')

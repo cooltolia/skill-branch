@@ -1,0 +1,30 @@
+mixin course-practice()
+    +b.SECTION.course-practice
+        .header
+            h3.title Практика:
+        .content
+            .card
+                .card-title Мультиплатформенность
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                .card-data
+                    .item
+                        .icon
+                            +icon('clock', 'fill')
+                        .value 1:20
+                    .item
+                        .label SP
+                        .value +10
+            .card
+                .card-title Мультиплатформенность
+                .card-data
+                    .item
+                        .icon
+                            +icon('clock', 'fill')
+                        .value 1:20
+                    .item
+                        .label SP
+                        .value +10
+            .actions
+                button(type='button').button.dark Подробности
+                button(type='button').button.bright Приступить
+        

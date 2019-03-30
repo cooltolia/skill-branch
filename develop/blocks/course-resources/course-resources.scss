@@ -1,0 +1,81 @@
+.course-resources {
+    @include card;
+    margin-bottom: 20px;
+
+    .header {
+        padding: 11px 18px;
+    }
+
+    .title {
+        margin: 0;
+
+        color: $main-color;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .list {
+        padding: 0 18px 15px 18px;
+        margin: 0;
+        list-style: none;
+
+        border-bottom: 1px solid $gray-color-l;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .item {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .item-icon {
+        margin-left: auto;
+        margin-right: 12px;
+        position: relative;
+        width: 15px;
+        height: 15px;
+
+        svg {
+            @include svg-icon;
+
+            fill: none;
+            stroke: $accent-color;
+        }
+    }
+
+    .item-title {
+        flex: 1 1 auto;
+        margin-right: 12px;
+
+        font-family: $font-2;
+        color: $gray-color;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $main-color;
+        }
+    }
+
+    .item-value {
+        margin-left: auto;
+
+        font-size: 14px;
+        color: $main-color;
+        text-align: right;
+    }
+}

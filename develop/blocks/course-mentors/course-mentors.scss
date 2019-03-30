@@ -1,0 +1,205 @@
+.course-mentors {
+    @include card;
+    margin-bottom: 20px;
+
+    .header {
+        padding: 11px 18px;
+    }
+
+    .title {
+        margin: 0;
+
+        color: $main-color;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .list {
+        padding: 0 18px;
+        margin: 0 0 7px;
+        list-style: none;
+
+        max-height: 306px;
+        overflow: auto;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        padding: 6px;
+        margin-bottom: 10px;
+
+        overflow: hidden;
+
+        border: 1px solid $gray-color-l;
+        box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+        border-radius: 4px;
+    }
+
+    .number {
+        flex: 1 0 25px;
+        text-align: center;
+
+        color: $gray-color;
+        font-size: 18px;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
+        margin-left: 3px;
+        margin-right: 14px;
+
+        img {
+            @include img;
+        }
+    }
+
+    .info {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .name {
+        width: 100%;
+        margin-bottom: 3px;
+
+        color: $main-color;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .status {
+        width: 100%;
+        margin-bottom: 3px;
+
+        font-family: $font-2;
+        color: $gray-color;
+        font-size: 14px;
+    }
+
+    .points {
+        flex: 1 1 auto;
+        margin-right: 14px;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            position: relative;
+            width: 12px;
+            height: 14px;
+            margin-right: 8px;
+
+            svg {
+                @include svg-icon;
+
+                fill: none;
+                stroke: $accent-color;
+            }
+        }
+
+        .value {
+            color: $main-color;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+
+    .likes {
+        flex: 0 1 auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        .icon {
+            position: relative;
+            width: 11px;
+            height: 10px;
+            margin-right: 5px;
+
+            svg {
+                @include svg-icon;
+
+                fill: none;
+                stroke: $gray-color;
+
+                transition: stroke 300ms ease;
+            }
+        }
+
+        .value {
+            color: $gray-color;
+            font-size: 12px;
+            font-weight: 500;
+
+            transition: color 300ms ease;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            .icon svg {
+                stroke: $green-color;
+            }
+
+            .value {
+                color: $green-color;
+            }
+        }
+    }
+
+    .load-more {
+        display: block;
+        width: 100%;
+        padding: 11px 20px;
+
+        border: 1px solid $gray-color-l;
+        border-radius: 0 0 4px 4px;
+
+        background: none;
+
+        color: $main-color;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $gray-color;
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        .icon {
+            position: absolute;
+            width: 10px;
+            height: 4px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            svg {
+                @include svg-icon;
+
+                fill: none;
+                stroke: currentColor;
+
+                transition: stroke 300ms ease;
+            }
+        }
+    }
+}

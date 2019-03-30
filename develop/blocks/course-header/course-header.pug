@@ -1,0 +1,12 @@
+mixin course-header()
+    +b.SECTION.course-header
+        h1.title Название курса
+        .progress
+            .points 100/500
+            .bar
+                +progress-bar(33)
+        .arrows
+            button.arrow.left
+                +icon('arrow-left')
+            button.arrow.right
+                +icon('arrow-left')

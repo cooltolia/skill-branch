@@ -1,0 +1,284 @@
+.course-chat {
+    @include card;
+    margin-bottom: 22px;
+    padding: 20px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        margin: 0;
+
+        color: $main-color;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .online {
+        color: $gray-color;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: right;
+    }
+
+    .body {
+        border: 1px solid $gray-color-l;
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .item {
+        margin-bottom: 30px;
+    }
+
+    .message {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .replies {
+        padding-left: 45px;
+    }
+
+    .message-header {
+        position: relative;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: flex-start;
+        margin-right: 10px;
+
+        .data {
+            margin-top: -3px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            margin-right: 13px;
+            border-radius: 50%;
+
+            img {
+                @include img;
+                border-radius: 50%;
+            }
+        }
+
+        .nick {
+            margin-right: 7px;
+
+            color: $main-color;
+            font-size: 16px;
+        }
+
+        .online {
+            margin-right: 7px;
+
+            width: 5px;
+            height: 5px;
+
+            background-color: $green-color;
+            border-radius: 50%;
+        }
+
+        .date,
+        .time {
+            color: $gray-color;
+            font-size: 14px;
+        }
+
+        .date {
+            margin-right: 7px;
+            position: relative;
+
+            &::after {
+                content: '|';
+                margin-left: 6px;
+
+                color: $gray-color-l;
+            }
+        }
+    }
+
+    .replies .message-header {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 12px;
+            top: 8px;
+            left: -34px;
+
+            background-image: url('../images/course-chat/reply.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .message-votes {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        .arrow {
+            position: relative;
+            width: 20px;
+            height: 10px;
+
+            border: none;
+            background: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+                svg {
+                    stroke: $main-color;
+                }
+            }
+
+            svg {
+                @include svg-icon;
+                width: 10px;
+                height: 6px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                fill: none;
+                stroke: $gray-color;
+
+                transition: stroke 300ms ease;
+            }
+
+            &.plus {
+                transform: rotate(180deg);
+            }
+        }
+
+        .value {
+            font-size: 14px;
+
+            &.positive {
+                color: $green-color;
+            }
+
+            &.negative {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .message-text {
+        width: 100%;
+        padding-left: 43px;
+        padding-right: 15%;
+        margin: 0;
+
+        color: $gray-color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .message-footer {
+        margin-top: 3px;
+        padding-left: 43px;
+    }
+
+    .message-reply {
+        border: none;
+        background: none;
+        padding: 0;
+        margin-right: 7px;
+
+        color: $gray-color;
+        font-size: 14px;
+        font-style: italic;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $main-color;
+        }
+    }
+
+    .send-message {
+        display: flex;
+
+        textarea {
+            height: 40px;
+            padding: 9px 20px;
+            resize: none;
+            flex: 1 1 auto;
+
+            border: 1px solid $gray-color-l;
+            box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+            border-radius: 4px;
+
+            font-size: 14px;
+            color: $gray-color;
+
+            overflow: hidden;
+            outline: none;
+
+            &::placeholder {
+                font-size: 14px;
+                color: $gray-color;
+            }
+        }
+
+        .submit {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+
+            border: none;
+
+            background-image: linear-gradient(78.53deg, #ff0800 -15.98%, #ff5e5e 105.02%);
+            background-position: top left;
+            box-shadow: 0px 4px 24px rgba(144, 50, 238, 0.2), 0px 4px 14px rgba(255, 0, 0, 0.2);
+            border-radius: 3px;
+
+            transition: 300ms;
+
+            &:hover {
+                background-image: linear-gradient(78.53deg, #ff5e5e -15.98%, #ff0800 105.02%);
+                box-shadow: 0px 4px 24px rgba(144, 50, 238, 0.2), 0px 4px 14px rgba(255, 0, 0, 0.6);
+            }
+
+            &:active {
+                box-shadow: 0px 4px 7px rgba(144, 50, 238, 0.2), 0px 4px 14px rgba(255, 0, 0, 0.1);
+                outline: none;
+            }
+
+            .icon {
+                position: absolute;
+                width: 19px;
+                height: 19px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                svg {
+                    @include svg-icon;
+
+                    fill: none;
+                    stroke: $white;
+                }
+            }
+        }
+    }
+}

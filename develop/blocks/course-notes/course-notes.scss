@@ -1,0 +1,67 @@
+.course-notes {
+    @include card;
+    margin-bottom: 22px;
+    padding: 20px;
+
+    .title {
+        margin: 0 0 20px;
+
+        color: $main-color;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .content {
+        border: 1px solid $gray-color-l;
+        border-radius: 4px;
+        padding: 20px;
+    }
+
+    .text {
+        margin: 0 0 20px;
+
+        color: $gray-color;
+        font-size: 14px;
+        line-height: 1.4;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px;
+
+        column-count: 3;
+        column-gap: 5px;
+
+        color: $gray-color;
+        font-size: 14px;
+        line-height: 1.4;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .item {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            background-color: $accent-color;
+            border-radius: 50%;
+        }
+    }
+}

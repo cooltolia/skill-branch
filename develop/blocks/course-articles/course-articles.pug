@@ -1,0 +1,29 @@
+mixin course-articles()
+    +b.SECTION.course-articles
+        .header
+            h3.title Необходимые статьи:
+        ul.list
+           li.item
+                a.item-title(href='#') Исходники текстов
+                span.item-value 12
+                span.item-icon
+                    +icon('heart')
+           li.item
+                a.item-title(href='#') Видео контент
+                span.item-value 138
+                span.item-icon
+                    +icon('heart')
+           li.item
+                a.item-title(href='#') Структура проекта
+                span.item-value 269
+                span.item-icon
+                    +icon('heart')
+           li.item
+                a.item-title(href='#') Решение задачи
+                span.item-value.negative -8
+                span.item-icon.negative
+                    +icon('heart')
+        button.load-more(type='button') 
+            span Показать все
+                .icon
+                    +icon('down-arrow')

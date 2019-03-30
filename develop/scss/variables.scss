@@ -15,22 +15,25 @@ $base-font-size: 16px;
 $font: 'Roboto Mono', Helvetica, Arial, sans-serif;
 $font-2: 'Roboto', Helvetica, Arial, sans-serif;
 
-$main-color: #1C0E42;
+$main-color: #1f0e42;
 $main-color-l: #473770;
-$main-color-d: #150A33;
+$main-color-m: #2a1956;
+$main-color-d: #150a33;
 
-$accent-color: #FF3531;
+$accent-color: #ff3531;
 
-$gray-color: #9CA9BA;
-$gray-color-l: #ECECEC;
-$gray-color-m: #F7F7F7;
-$gray-blue-color: #675F7F;
+$secondary-color: #fc4c4c;
 
-$green-color: #4DBA87;
-$green-color-color-l: #CFFBE6;
+$gray-color: #9ca9ba;
+$gray-color-l: #ececec;
+$gray-color-m: #f7f7f7;
+$gray-blue-color: #675f7f;
+
+$green-color: #4dba87;
+$green-color-color-l: #cffbE6;
 
 $black: #040407;
-$white: #FFFFFF;
+$white: #ffffff;
 
 @mixin btn-theme($modifier: dark) {
     position: relative;

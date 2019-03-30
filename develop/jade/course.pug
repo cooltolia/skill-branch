@@ -1,0 +1,25 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+doctype
+html(lang='ru')
+    +doc-header
+    body.pageload.no-js
+        +board
+            +main-navigation
+            +main-header
+            +content-wrapper
+                +main-content
+                    +course-header
+                    +course-material
+                    +course-notes
+                    +course-chat
+                +aside-content
+                    +course-topics
+                    +course-practice
+                    +course-resources
+                    +course-articles
+                    +course-mentors
+                    +course-participants
+            +course-bar
+    +doc-footer

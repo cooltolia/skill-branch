@@ -1,0 +1,136 @@
+.course-articles {
+    @include card;
+    margin-bottom: 20px;
+
+    .header {
+        padding: 11px 18px;
+    }
+
+    .title {
+        margin: 0;
+
+        color: $main-color;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .list {
+        padding: 0 18px 15px 18px;
+        margin: 0;
+        list-style: none;
+
+        border-bottom: 1px solid $gray-color-l;
+    }
+
+    .item {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .item-title {
+        flex: 1 1 auto;
+        margin-right: 12px;
+
+        font-family: $font-2;
+        color: $gray-color;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $main-color;
+        }
+    }
+
+    .item-value {
+        margin-left: auto;
+        margin-right: 5px;
+
+        font-size: 14px;
+        color: $green-color;
+        text-align: right;
+
+        &.negative {
+            color: $accent-color;
+        }
+    }
+
+    .item-icon {
+        position: relative;
+        width: 10px;
+        height: 9px;
+
+        &.negative svg {
+            stroke: $accent-color;
+        }
+
+        svg {
+            @include svg-icon;
+
+            fill: none;
+            stroke: $green-color;
+        }
+    }
+
+    .load-more {
+        display: block;
+        width: 100%;
+        padding: 11px 20px;
+
+        border: 1px solid $gray-color-l;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+
+        background: none;
+
+        color: $main-color;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $gray-color;
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        .icon {
+            position: absolute;
+            width: 10px;
+            height: 4px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            svg {
+                @include svg-icon;
+
+                fill: none;
+                stroke: currentColor;
+
+                transition: stroke 300ms ease;
+            }
+        }
+    }
+}

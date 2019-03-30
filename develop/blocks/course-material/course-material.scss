@@ -1,0 +1,215 @@
+.course-material {
+    @include card;
+    margin-bottom: 22px;
+
+    .video-wrapper {
+        width: 100%;
+        position: relative;
+
+        &::before {
+            display: block;
+            content: '';
+            width: 100%;
+            padding-top: 56.25%;
+        }
+    }
+
+    .video-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        background-image: url('../images/course-material/video-preview.jpg');
+        background-size: cover;
+    }
+
+    video {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .play-video {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+
+        border: none;
+        background: none;
+        outline: none;
+
+        background-image: url('../images/course-material/play.png');
+        background-size: contain;
+
+        transition: transform 300ms ease;
+
+        &:hover,
+        &:active,
+        &:focus {
+            transform: translate(-50%, -50%) scale(1.09);
+        }
+    }
+
+    .content {
+        padding: 15px 20px;
+    }
+
+    .title {
+        margin: 0 0 5px;
+
+        color: $main-color;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .label {
+        display: inline-block;
+        padding: 0 7px;
+        margin-bottom: 10px;
+
+        font-size: 14px;
+        line-height: 1.7;
+        color: $white;
+
+        background-color: $main-color;
+        border-radius: 2px;
+
+        &.available {
+            background-color: $green-color-color-l;
+            color: $green-color;
+        }
+
+        &.closed {
+            background-color: $gray-color-l;
+            color: $gray-color;
+        }
+    }
+
+    .description {
+        margin: 0 0 20px;
+        max-width: 70%;
+
+        color: $gray-color;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .samples {
+        padding: 20px;
+        border: 1px solid $gray-color-l;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .sample {
+        padding: 3px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+
+        border-radius: 3% / 50%;
+        background: rgba(#e0e4ea, 0.4);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .play-sample {
+            position: relative;
+            width: 44px;
+            height: 44px;
+            margin-right: 18px;
+
+            background-color: $white;
+            border-radius: 50%;
+
+            box-shadow: -10px 34px 74px rgba(144, 50, 238, 0.3), 4px 16px 24px rgba(255, 0, 0, 0.1),
+                -10px 34px 74px rgba(144, 50, 238, 0.3), 4px 16px 24px rgba(255, 0, 0, 0.1);
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 18px;
+                width: 14px;
+                height: 17px;
+
+                background-image: url('../images/course-material/play-sample.svg');
+                background-size: auto;
+                background-position: left center;
+                background-repeat: no-repeat;
+
+                // box-shadow: -10px 14px 44px rgba(144, 50, 238, 0.5), 10px 14px 34px rgba(255, 0, 0, 0.3),
+                //     -10px 14px 44px rgba(144, 50, 238, 0.5), 10px 14px 34px rgba(255, 0, 0, 0.3);
+            }
+        }
+
+        .text,
+        .duration {
+            font-family: $font-2;
+            color: $gray-color;
+            font-size: 14px;
+        }
+
+        .duration {
+            margin-left: auto;
+            margin-right: 13px;
+        }
+    }
+
+    .load-more {
+        display: block;
+        width: 100%;
+        padding: 11px 20px;
+
+        border: 1px solid $gray-color-l;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+
+        background: none;
+
+        color: $main-color;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $gray-color;
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+            padding: 0 55px;
+            text-align: center;
+        }
+
+        .icon {
+            position: absolute;
+            width: 10px;
+            height: 4px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            svg {
+                @include svg-icon;
+
+                fill: none;
+                stroke: currentColor;
+                
+                transition: stroke 300ms ease;
+            }
+        }
+    }
+}

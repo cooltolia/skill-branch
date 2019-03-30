@@ -1,0 +1,59 @@
+.course-bar {
+    width: 100%;
+
+    font-family: $font;
+    color: $white;
+
+    background-color: $main-color-m;
+
+    .content {
+        width: 1200px;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .main {
+        width: 891px;
+        display: flex;
+        align-items: center;
+    }
+
+    .aside {
+        width: 273px;
+        margin-left: auto;
+    }
+
+    .column {
+        padding: 15px 0 15px 40px;
+        position: relative;
+        flex: 1 1 auto;
+
+        border-right: 1px solid #392a58;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+    .title {
+        margin: 0;
+
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .text {
+        margin: 0;
+
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .button {
+        @include btn-theme(bright);
+        width: 100%;
+        box-shadow: -10px 14px 44px rgba(144, 50, 238, 0.5), 10px 14px 34px rgba(255, 0, 0, 0.3);
+    }
+}

@@ -1,0 +1,70 @@
+mixin course-participants()
+    +b.SECTION.course-participants
+        .header
+            h3.title Рейтинг участников:
+        ul.list
+            li.item
+                .number 1
+                .avatar
+                    img(src="images/avatar2.jpg", alt="")
+                .info
+                    .name Константин Константинов
+                    .status Author
+                    .points
+                        .icon
+                            +icon('logo')
+                        .value
+                            | 1000SP
+            li.item
+                .number 2
+                .avatar
+                    img(src="images/avatar2.jpg", alt="")
+                .info
+                    .name Константин Константинов
+                    .status Author
+                    .points
+                        .icon
+                            +icon('logo')
+                        .value
+                            | 1000SP
+            li.item
+                .number 3
+                .avatar
+                    img(src="images/avatar2.jpg", alt="")
+                .info
+                    .name Константин Константинов
+                    .status Author
+                    .points
+                        .icon
+                            +icon('logo')
+                        .value
+                            | 1000SP
+            li.divider(aria-hidden='true')
+            li.item
+                .number 54
+                .avatar
+                    img(src="images/avatar2.jpg", alt="")
+                .info
+                    .name Константин Константинов
+                    .status Author
+                    .points
+                        .icon
+                            +icon('logo')
+                        .value
+                            | 1000SP
+            li.item
+                .number 55  
+                .avatar
+                    img(src="images/avatar2.jpg", alt="")
+                .info
+                    .name Константин Константинов
+                    .status Author
+                    .points
+                        .icon
+                            +icon('logo')
+                        .value
+                            | 1000SP
+        button.load-more(type='button') 
+            span Показать все
+                .icon
+                    +icon('down-arrow')
