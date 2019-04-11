@@ -1,0 +1,18 @@
+mixin authorization()
+    +b.SECTION.authorization
+        .wrapper
+            .logo
+                +icon('logo-full', 'fill')
+            .content
+                form.form(action='#' method='post')
+                    h1.form-title Авторизация
+                    .input-row
+                        label(for='auth-email') E-mail
+                        input(type='email' name='authEmail' id='auth-email')
+                    .input-row
+                        label(for='auth-email') Пароль
+                        input(type='password' name='authPassword' id='auth-password')
+                    .actions
+                        .submit
+                        .login-socials
+                    .links
