@@ -1,4 +1,5 @@
 .authorization {
+    min-width: 1600px;
     background: #E5E5E5;
     background-image: url('../images/authorization/image.png'), url('../images/authorization/bg.svg');
     background-size: auto, auto 100%;
@@ -97,7 +98,7 @@
 
             &:focus {
                 border: 1px solid $main-color-l;
-                outline: none;
+                outline: none;  
 
                 + label {
                     color: $main-color-l;

@@ -3646,6 +3646,7 @@ template {
   font-family: "Roboto Mono", Helvetica, Arial, sans-serif; }
 
 .authorization {
+  min-width: 1600px;
   background: #E5E5E5;
   background-image: url("../images/authorization/image.png"), url("../images/authorization/bg.svg");
   background-size: auto, auto 100%;
