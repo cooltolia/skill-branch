@@ -1,3 +1,192 @@
 .authorization {
-    
+    background: #E5E5E5;
+    background-image: url('../images/authorization/image.png'), url('../images/authorization/bg.svg');
+    background-size: auto, auto 100%;
+    background-position: bottom 10% right 5%, bottom right;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 755px;
+
+    font-family: $font;
+
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .logo {
+        position: relative;
+        width: 243px;
+        height: 62px;
+        margin-bottom: 60px;
+
+        svg {
+            @include svg-icon;
+        }
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info {
+        width: 405px;
+    }
+
+    .info-title {
+        margin: 0 0 15px;
+
+        color: $main-color-l;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .info-text {
+        margin: 0;
+
+        font-family: $font-2;
+        color: $gray-color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .form {
+        padding-top: 10px;
+        width: 375px;
+    }
+
+    .form-title {
+        margin: 0 0 20px;
+
+        color: $main-color-l;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .input-row {
+        margin-bottom: 15px;
+
+        display: flex;
+        flex-flow: column nowrap;
+
+        label {
+            order: -1;
+            margin-bottom: 3px;
+
+            font-size: 12px;
+            color: #B3BFCF;
+
+            transition: color 300ms ease;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 12px;
+
+            color: $main-color;
+
+            background: #FFFFFF;
+            border: 1px solid #CED5DF;
+            border-radius: 4px;
+
+            transition: border-color 300ms ease;
+
+            &:focus {
+                border: 1px solid $main-color-l;
+                outline: none;
+
+                + label {
+                    color: $main-color-l;
+                }
+            }
+        }
+    }
+
+    .actions {
+        padding-top: 10px;
+        margin-bottom: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .submit {
+        width: 135px;
+        @include btn-theme(bright);
+    }
+
+    .login-socials {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .login-social {
+        position: relative;
+        width: 39px;
+        height: 39px;
+        margin-right: 11px;
+
+        background: #EEF1F1;
+        border-radius: 50%;
+
+        transition: background-color 300ms ease;
+
+        svg {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: darken(#EEF1F1, 20%);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .legal-link {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 15px;
+
+        color: $main-color-l;
+        font-family: $font-2;
+        font-size: 14px;
+        text-decoration: none;
+
+        transition: color 300ms ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            
+            border-bottom: 1px dashed $main-color-l;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $accent-color;
+            text-decoration: none;
+
+            &::after {
+                border-color: $accent-color;
+            }
+        }
+    }
+
 }
