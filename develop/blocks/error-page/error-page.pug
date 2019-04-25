@@ -1,0 +1,11 @@
+mixin error-page(data)
+    +b.error-page
+        .inner
+            .logo
+                +icon('logo-full', 'fill')
+            .image
+                img(src=data.image, alt=data.subtitle)
+            h1.title= data.title
+            h2.subtitle= data.subtitle
+            p.text !{data.text}
+            a.home(href='/') На главную

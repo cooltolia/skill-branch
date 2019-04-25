@@ -1,0 +1,9 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+doctype
+html(lang='ru')
+    +doc-header
+    body.pageload.no-js
+        +error-page(error_500)
+    +doc-footer
