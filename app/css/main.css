@@ -28,6 +28,12 @@
   font-style: normal;
   src: url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"); }
 
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"); }
+
 /*!
  * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7395,6 +7401,272 @@ template {
         -ms-transform: translate(-50%, -50%) rotate(180deg);
             transform: translate(-50%, -50%) rotate(180deg); }
 
+.deadline {
+  width: 274px;
+  padding-bottom: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+          box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+  border-radius: 4px; }
+  .deadline .header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 12px 20px;
+    -webkit-box-align: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .deadline .header .title {
+      font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #1f0e42; }
+    .deadline .header .close {
+      position: relative;
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      outline: none; }
+      .deadline .header .close svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        stroke: #1f0e42;
+        -webkit-transition: stroke 300ms ease;
+        -moz-transition: stroke 300ms ease;
+        transition: stroke 300ms ease; }
+      .deadline .header .close:hover svg, .deadline .header .close:active svg, .deadline .header .close:focus svg {
+        stroke: #ff3531; }
+  .deadline .calendar {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    background: #ececec;
+    -webkit-box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+            box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1); }
+  .deadline .calendar-header {
+    position: relative;
+    padding: 14px 20px 4px; }
+  .deadline .calendar-current {
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500; }
+  .deadline .calendar-navigation {
+    position: absolute;
+    right: 0;
+    top: 19px;
+    right: 20px;
+    width: 25px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .deadline .calendar-navigation .arrow {
+      position: relative;
+      width: 5px;
+      height: 8px;
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      outline: none; }
+      .deadline .calendar-navigation .arrow svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        stroke: #9ca9ba;
+        fill: transparent;
+        -webkit-transition: stroke 300ms ease;
+        -moz-transition: stroke 300ms ease;
+        transition: stroke 300ms ease; }
+      .deadline .calendar-navigation .arrow:hover svg, .deadline .calendar-navigation .arrow:active svg, .deadline .calendar-navigation .arrow:focus svg {
+        stroke: #1f0e42; }
+    .deadline .calendar-navigation .next {
+      -webkit-transform: rotate(180deg);
+         -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  .deadline .calendar-body {
+    padding: 10px; }
+  .deadline .calendar-weekdays {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+       -moz-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-bottom: 10px; }
+  .deadline .calendar-weekday {
+    width: -webkit-calc(100% / 7);
+    width: -moz-calc(100% / 7);
+    width: calc(100% / 7);
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    color: rgba(0, 0, 0, 0.55);
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-align: center; }
+  .deadline .calendar-days {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: baseline;
+       -moz-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
+  .deadline .calendar-day {
+    width: -webkit-calc(100% / 7);
+    width: -moz-calc(100% / 7);
+    width: calc(100% / 7);
+    max-width: -webkit-calc(100% / 7);
+    max-width: -moz-calc(100% / 7);
+    max-width: calc(100% / 7);
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    padding: 3px 8px 3px 12px;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: left;
+    -webkit-transition: color 300ms ease, background-color 300ms ease;
+    -moz-transition: color 300ms ease, background-color 300ms ease;
+    transition: color 300ms ease, background-color 300ms ease;
+    border-radius: 2px;
+    cursor: pointer; }
+    .deadline .calendar-day.inactive {
+      color: rgba(180, 180, 180, 0.85); }
+    .deadline .calendar-day:hover {
+      color: #fff;
+      background-color: #ff3531; }
+  .deadline .deadline-timer {
+    padding: 15px 20px; }
+  .deadline .timer-title {
+    margin-bottom: 5px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: #9ca9ba;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5; }
+  .deadline .timer-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .deadline .timer-block {
+    width: 30%;
+    margin-right: 12px;
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+    .deadline .timer-block:last-child {
+      margin-right: 0; }
+  .deadline .timer-value {
+    padding: 15px;
+    margin-bottom: 10px;
+    font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+    color: #1f0e42;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+            box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+    border-radius: 4px; }
+  .deadline .timer-label {
+    color: #9ca9ba;
+    font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase; }
+  .deadline .button {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 12px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background-image: -webkit-linear-gradient(34.41deg, #FF0800 -15.98%, #FF5E5E 105.02%);
+    background-image: -moz- oldlinear-gradient(34.41deg, #FF0800 -15.98%, #FF5E5E 105.02%);
+    background-image: linear-gradient(55.59deg, #FF0800 -15.98%, #FF5E5E 105.02%);
+    -webkit-box-shadow: 0px 4px 24px rgba(144, 50, 238, 0.2), 0px 4px 14px rgba(255, 0, 0, 0.2);
+            box-shadow: 0px 4px 24px rgba(144, 50, 238, 0.2), 0px 4px 14px rgba(255, 0, 0, 0.2);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+    margin: 0 20px; }
+    .deadline .button:hover, .deadline .button:focus {
+      background-image: -webkit-linear-gradient(54.07deg, #FF5954 -15.98%, #FF5E5E 105.02%);
+      background-image: -moz- oldlinear-gradient(54.07deg, #FF5954 -15.98%, #FF5E5E 105.02%);
+      background-image: linear-gradient(35.93deg, #FF5954 -15.98%, #FF5E5E 105.02%);
+      -webkit-box-shadow: 0px 6px 14px rgba(144, 50, 238, 0.2), 0px 8px 14px rgba(255, 0, 0, 0.2);
+              box-shadow: 0px 6px 14px rgba(144, 50, 238, 0.2), 0px 8px 14px rgba(255, 0, 0, 0.2); }
+    .deadline .button:active {
+      background-image: -webkit-linear-gradient(54.07deg, #FF0800 -15.98%, #DA1313 105.02%);
+      background-image: -moz- oldlinear-gradient(54.07deg, #FF0800 -15.98%, #DA1313 105.02%);
+      background-image: linear-gradient(35.93deg, #FF0800 -15.98%, #DA1313 105.02%);
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+    .deadline .button:hover, .deadline .button:active, .deadline .button:focus {
+      text-decoration: none;
+      color: #ffffff; }
+
 .error-page {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: #9ca9ba;
@@ -7809,6 +8081,290 @@ template {
   -webkit-transition: color 300ms ease;
   -moz-transition: color 300ms ease;
   transition: color 300ms ease; }
+
+.mobile-stub {
+  width: 100%;
+  background-image: url("../images/mobile/bg_wall.jpg");
+  background-size: cover;
+  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+  .mobile-stub .wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    padding-top: 65px;
+    height: 100%;
+    height: 100vh;
+    min-height: 812px;
+    background-image: url("../images/mobile/bg_imac.png");
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat; }
+  .mobile-stub .logo {
+    position: relative;
+    margin: 0 auto 20px;
+    width: 66px;
+    height: 77px; }
+    .mobile-stub .logo svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      fill: #ff3531; }
+  .mobile-stub .title {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #ff3531;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase; }
+  .mobile-stub .text {
+    margin: 0;
+    color: #9ca9ba;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center; }
+
+.modal-homework {
+  width: 615px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+          box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+  border-radius: 4px; }
+  .modal-homework .header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px 30px;
+    -webkit-box-align: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 1px solid #ececec; }
+    .modal-homework .header .title {
+      font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      color: #1f0e42; }
+    .modal-homework .header .close {
+      position: relative;
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      outline: none; }
+      .modal-homework .header .close svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        stroke: #1f0e42;
+        -webkit-transition: stroke 300ms ease;
+        -moz-transition: stroke 300ms ease;
+        transition: stroke 300ms ease; }
+      .modal-homework .header .close:hover svg, .modal-homework .header .close:active svg, .modal-homework .header .close:focus svg {
+        stroke: #ff3531; }
+  .modal-homework .form {
+    padding: 15px 30px 30px; }
+    .modal-homework .form .title {
+      margin-bottom: 7px;
+      font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+      color: #1f0e42;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5; }
+    .modal-homework .form .text {
+      margin-bottom: 20px;
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+      color: #9ca9ba;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.4; }
+    .modal-homework .form .checkbox-row {
+      margin-bottom: 15px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+         -moz-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+      .modal-homework .form .checkbox-row input {
+        display: none; }
+      .modal-homework .form .checkbox-row .label {
+        position: relative;
+        padding-left: 20px;
+        margin-right: 20px;
+        -webkit-box-flex: 1;
+           -moz-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+        cursor: pointer; }
+        .modal-homework .form .checkbox-row .label::before, .modal-homework .form .checkbox-row .label::after {
+          content: '';
+          position: absolute;
+          top: 3px;
+          left: 0;
+          width: 11px;
+          height: 11px;
+          -webkit-box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+                  box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+          border-radius: 2px;
+          -webkit-transition: opacity 300ms ease;
+          -moz-transition: opacity 300ms ease;
+          transition: opacity 300ms ease; }
+        .modal-homework .form .checkbox-row .label::before {
+          border: 1px solid #9ca9ba;
+          opacity: 1; }
+        .modal-homework .form .checkbox-row .label::after {
+          border: 1px solid #1f0e42;
+          background-image: url("../images/svg/check.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0; }
+      .modal-homework .form .checkbox-row input:checked + .label::before {
+        opacity: 0; }
+      .modal-homework .form .checkbox-row input:checked + .label::after {
+        opacity: 1; }
+      .modal-homework .form .checkbox-row .label-title {
+        display: block;
+        margin-bottom: 5px;
+        font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+        color: #1f0e42;
+        font-size: 14px;
+        line-height: 1.3; }
+      .modal-homework .form .checkbox-row .label-text {
+        display: block;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+        color: #9ca9ba;
+        font-size: 14px;
+        line-height: 1.3; }
+    .modal-homework .form .points {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-flex: 0;
+         -moz-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; }
+    .modal-homework .form .points-value {
+      margin-right: 5px;
+      font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+      color: #473770;
+      font-size: 14px;
+      line-height: 1.5; }
+    .modal-homework .form .points-icon {
+      position: relative;
+      width: 11px;
+      height: 13px; }
+      .modal-homework .form .points-icon svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        fill: #ff3531; }
+    .modal-homework .form .form-footer {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+         -moz-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+    .modal-homework .form .input-row {
+      -webkit-box-flex: 1;
+         -moz-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      margin-right: 15px; }
+      .modal-homework .form .input-row label {
+        display: block;
+        margin-bottom: 7px;
+        font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+        color: #c8cdd4;
+        font-size: 12px;
+        line-height: 1; }
+      .modal-homework .form .input-row input {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        height: 42px;
+        background: #ffffff;
+        border: 1px solid #ececec;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+                box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+        border-radius: 4px;
+        outline: none;
+        font-size: 14px;
+        color: #1f0e42;
+        -webkit-transition: border-color 300ms ease;
+        -moz-transition: border-color 300ms ease;
+        transition: border-color 300ms ease; }
+        .modal-homework .form .input-row input:hover, .modal-homework .form .input-row input:active, .modal-homework .form .input-row input:focus {
+          border-color: #1f0e42; }
+    .modal-homework .form .submit {
+      position: relative;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 12px;
+      font-size: 12px;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #ffffff;
+      border-radius: 3px;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      background-color: #473770;
+      -webkit-transition: all 300ms ease;
+      -moz-transition: all 300ms ease;
+      transition: all 300ms ease;
+      padding: 12px 20px;
+      height: 42px; }
+      .modal-homework .form .submit:hover, .modal-homework .form .submit:focus {
+        background-color: #341F6A; }
+      .modal-homework .form .submit:active {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #33118F), to(#7748f6));
+        background-image: -webkit-linear-gradient(top, #33118F 50%, #7748f6 100%);
+        background-image: -moz- oldlinear-gradient(top, #33118F 50%, #7748f6 100%);
+        background-image: linear-gradient(180deg, #33118F 50%, #7748f6 100%); }
+      .modal-homework .form .submit:hover, .modal-homework .form .submit:active, .modal-homework .form .submit:focus {
+        text-decoration: none;
+        color: #ffffff; }
 
 .modal-settings {
   width: 890px;

@@ -1,0 +1,10 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+doctype
+html(lang='ru')
+    +doc-header
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+    body.pageload.no-js
+        +mobile-stub
+    +doc-footer

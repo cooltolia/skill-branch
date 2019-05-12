@@ -1,0 +1,38 @@
+mixin deadline()
+    +b.SECTION.deadline
+        .header
+            h3.title Установи дедлайн:
+            button.close
+                +icon('close')
+        .calendar
+            .calendar-header
+                .calendar-current Март 2019
+                .calendar-navigation
+                    button.arrow.prev
+                        +icon('chevron-left')
+                    button.arrow.next
+                        +icon('chevron-left')
+            .calendar-body
+                .calendar-weekdays
+                    each val in ['ВС', 'ПН', 'ВТ', 'ВС', 'ЧТ', 'ПТ', 'СБ']
+                        .calendar-weekday= val
+                .calendar-days
+                    each item in [26, 27, 28, 29, 30, 31]
+                        .calendar-day.inactive= item
+                    - var day = 1;
+                    while day <= 31
+                        .calendar-day= day++
+        .deadline-timer
+            .timer-title Осталось времени
+            .timer-row
+                .timer-block
+                    .timer-value 26
+                    .timer-label дней
+                .timer-block
+                    .timer-value 12
+                    .timer-label часов
+                .timer-block
+                    .timer-value 35
+                    .timer-label минут
+        a.button(href='#') Приступить к заданию
+

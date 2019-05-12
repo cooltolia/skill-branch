@@ -1,0 +1,229 @@
+.deadline {
+    width: 274px;
+    padding-bottom: 30px;
+
+    background: #ffffff;
+    box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+    border-radius: 4px;
+
+    .header {
+        display: flex;
+        padding: 12px 20px;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            font-family: $font;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.4;
+
+            color: $main-color;
+        }
+
+        .close {
+            position: relative;
+            width: 9px;
+            height: 9px;
+
+            padding: 0;
+            margin: 0;
+            background: none;
+            border: none;
+            outline: none;
+
+            svg {
+                @include svg-icon;
+
+                stroke: $main-color;
+
+                transition: stroke 300ms ease;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                svg {
+                    stroke: $accent-color;
+                }
+            }
+        }
+    }
+
+    .calendar {
+        font-family: $font-2;
+
+        background: $gray-color-l;
+        box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+    }
+
+    .calendar-header {
+        position: relative;
+        padding: 14px 20px 4px;
+    }
+
+    .calendar-current {
+        color: rgba(black, 0.88);
+        font-size: 12px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .calendar-navigation {
+        position: absolute;
+        right: 0;
+        top: 19px;
+        right: 20px;
+        width: 25px;
+        display: flex;
+        justify-content: space-between;
+
+        .arrow {
+            position: relative;
+            width: 5px;
+            height: 8px;
+
+            padding: 0;
+            margin: 0;
+            background: none;
+            border: none;
+            outline: none;
+
+            svg {
+                @include svg-icon;
+
+                stroke: $gray-color;
+                fill: transparent;
+
+                transition: stroke 300ms ease;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                svg {
+                    stroke: $main-color;
+                }
+            }
+        }
+
+        .next {
+            transform: rotate(180deg);
+        }
+    }
+
+    .calendar-body {
+        padding: 10px;
+    }
+
+    .calendar-weekdays {
+        display: flex;
+        align-items: baseline;
+
+        margin-bottom: 10px;
+    }
+
+    .calendar-weekday {
+        width: calc(100% / 7);
+        flex: 1 1 auto;
+
+        color: rgba(black, 0.55);
+        font-family: $font-2;
+        font-weight: 500;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .calendar-days {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: baseline;
+    }
+
+    .calendar-day {
+        width: calc(100% / 7);
+        max-width: calc(100% / 7);
+        flex: 1 1 auto;
+        padding: 3px 8px 3px 12px;
+
+        color: rgba(black, 0.85);
+        font-family: $font-2;
+        font-weight: 400;
+        font-size: 11px;
+        text-align: left;
+
+        transition: color 300ms ease, background-color 300ms ease;
+
+        border-radius: 2px;
+        cursor: pointer;
+
+        &.inactive {
+            color: rgba(180, 180, 180, 0.85);
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: $accent-color;
+        }
+    }
+
+    .deadline-timer {
+        padding: 15px 20px;
+    }
+
+    .timer-title {
+        margin-bottom: 5px;
+
+        font-family: $font-2;
+        color: $gray-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    .timer-row {
+        display: flex;
+    }
+
+    .timer-block {
+        width: 30%;
+        margin-right: 12px;
+        flex: 1 1 auto;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .timer-value {
+        padding: 15px;
+        margin-bottom: 10px;
+
+        font-family: $font;
+        color: $main-color;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 700;
+
+        background: #ffffff;
+        border: 1px solid $gray-color-l;
+        box-sizing: border-box;
+        box-shadow: 0px 6px 10px rgba(190, 190, 190, 0.1);
+        border-radius: 4px;
+    }
+
+    .timer-label {
+        color: $gray-color;
+        font-family: $font;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+
+    .button {
+        @include btn-theme(bright);
+        margin: 0 20px;
+    }
+}

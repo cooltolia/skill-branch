@@ -1,0 +1,50 @@
+mixin modal-homework()
+    +b.SECTION.modal-homework
+        .header
+            h3.title Отправить домашнюю работу
+            button.close
+                +icon('close')
+        form.form(action='#' method='post')
+            .title Название курса
+            p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate
+            .checkbox-row
+                input(type='checkbox' name='homework' value='homework_1' id='homework_1')
+                label.label(for='homework_1')
+                    span.label-title Задание 1
+                    span.label-text Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                .points
+                    .points-value +1000
+                    .points-icon
+                        +icon('logo')
+            .checkbox-row
+                input(type='checkbox' name='homework' value='homework_2' id='homework_2')
+                label.label(for='homework_2')
+                    span.label-title Задание 2
+                    span.label-text Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                .points
+                    .points-value +1000
+                    .points-icon
+                        +icon('logo')
+            .checkbox-row
+                input(type='checkbox' name='homework' value='homework_3' id='homework_3')
+                label.label(for='homework_3')
+                    span.label-title Задание 3
+                    span.label-text Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                .points
+                    .points-value +1000
+                    .points-icon
+                        +icon('logo')
+            .checkbox-row
+                input(type='checkbox' name='homework' value='homework_4' id='homework_4')
+                label.label(for='homework_4')
+                    span.label-title Задание 4
+                    span.label-text Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                .points
+                    .points-value +1000
+                    .points-icon
+                        +icon('logo')
+            .form-footer
+                .input-row
+                    label(for='github_input') Github
+                    input(type='text' name='github' id='github_input')
+                button.submit Сохранить
