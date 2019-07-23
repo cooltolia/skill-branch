@@ -1,0 +1,175 @@
+.courses-list {
+    padding: 35px 0;
+    min-height: 100vh;
+
+    font-family: $font;
+
+    .heading {
+        margin: 0 0 25px;
+
+        color: $main-color-d;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    .list {
+        list-style: none;
+        padding: 0;
+        margin: 0 -10px -20px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .card {
+        width: 30%;
+        margin: 0 10px 20px;
+        flex: 1 1 auto;
+        min-height: 320px;
+
+        border-radius: 4px;
+        overflow: hidden;
+
+        &.in-dev {
+            position: relative; 
+            background-image: url(../images/courses-list/course_dev.jpg);
+            background-size: cover;
+
+            .title {
+                background-image: none;
+            }
+        }
+    }
+
+    .title {
+        position: relative;
+        z-index: 2;
+        height: 200px;
+        margin: 0;
+        padding: 125px 25px 20px;
+
+        font-family: $font;
+        color: $white;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1;
+
+        background-image: linear-gradient(0deg, #1c0e42 0%, #7426ef 100%);
+    }
+
+    .data {
+        padding: 25px 20px 20px;
+
+        background-color: #fff;
+    }
+
+    .data-row {
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            justify-content: space-between;
+        }
+    }
+
+    .data-value {
+        position: relative;
+        margin-right: 25px;
+        padding-left: 22px;
+        margin-bottom: 18px;
+
+        color: $main-color;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1;
+
+        .icon {
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            svg {
+                @include svg-icon;
+
+                fill: $gray-color;
+            }
+        }
+    }
+
+    .date {
+        padding-left: 30px;
+
+        .icon {
+            width: 24px;
+            height: 18px;
+        }
+    }
+
+    .prices {
+        padding-left: 30px;
+        position: relative;
+        display: flex;
+        align-items: baseline;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1;
+
+        .icon {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            svg {
+                @include svg-icon;
+
+                fill: $gray-color;
+            }
+        }
+    }
+
+    .current-price {
+        color: $main-color;
+        text-shadow: -11.33px 15.8621px 49.8522px rgba(144, 50, 238, 0.5),
+            11.33px 15.8621px 38.5222px rgba(255, 0, 0, 0.3);
+    }
+
+    .old-price {
+        margin-right: 15px;
+        color: $gray-color;
+        text-decoration: line-through;
+
+        text-shadow: -11.33px 15.8621px 49.8522px rgba(144, 50, 238, 0.5),
+            11.33px 15.8621px 38.5222px rgba(255, 0, 0, 0.3);
+    }
+
+    .more {
+        @include btn-theme(bright);
+        color: $white !important;
+        flex: 0 0 auto;
+        margin-left: 15px;
+    }
+
+    .status {
+        position: absolute;
+        z-index: 2;
+        bottom: 25px;
+        width: 100%;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1;
+        text-align: center;
+        color: #c3a4f5;
+
+        text-shadow: -11.33px 15.8621px 49.8522px rgba(144, 50, 238, 0.5),
+            11.33px 15.8621px 38.5222px rgba(255, 0, 0, 0.3);
+    }
+}

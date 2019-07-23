@@ -1,0 +1,61 @@
+mixin courses-list()
+    +b.SECTION.courses-list
+        h1.heading Все курсы
+        ul.list
+            li.card
+                .title DEV-Intensive Android на Kotlin
+                .data 
+                    .data-row
+                        .date.data-value
+                            .icon
+                                +icon('flags')
+                            | 24.12.18
+                        .duration.data-value
+                            .icon
+                                +icon('calendar')
+                            | 5 месяцев
+                        .level.data-value
+                            .icon
+                                +icon('star')
+                            | Junior
+                    .data-row
+                        .prices
+                            .icon
+                                +icon('purse')
+                            .current-price Бесплатно
+                        a.more(href='#') Подробнее
+            li.card
+                .title(style='background-image:url(images/courses-list/course2.jpg)') Middle Android Developer
+                .data
+                    .data-row
+                        .date.data-value
+                            .icon
+                                +icon('flags')
+                            | 24.12.18
+                        .duration.data-value
+                            .icon
+                                +icon('calendar')
+                            | 5 месяцев
+                        .level.data-value
+                            .icon
+                                +icon('star')
+                            | Junior
+                    .data-row
+                        .prices
+                            .icon
+                                +icon('purse')
+                            .old-price 60000
+                            .current-price 30000 руб.
+                        a.more(href='#') Подробнее
+            li.card.in-dev
+                .title iOS - разработка
+                .status В разработке
+            li.card.in-dev
+                .title JavaScript с нуля
+                .status В разработке
+            li.card.in-dev
+                .title React + Redux
+                .status В разработке
+            li.card.in-dev
+                .title Flutter - разработка
+                .status В разработке
